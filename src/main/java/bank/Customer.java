@@ -18,7 +18,7 @@ public class Customer {
     setAccountId(accountId);
   }
 
-  // seeters and getters
+  // setters and getters
   public int getId() {
     return this.id;
   }
