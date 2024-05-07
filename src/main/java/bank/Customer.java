@@ -7,15 +7,17 @@ public class Customer {
   private String username;
   private String password;
   private int accountId;
+  private boolean authenticated;
 
   // constructor
-  public Customer(int id, String name, String username, String password, int accoountId) {
+  public Customer(int id, String name, String username, String password, int accountId) {
 
     setId(id);
     setName(name);
     setUsername(username);
     setPassword(password);
     setAccountId(accountId);
+    setAuthenticated(false);
   }
 
   // setters and getters
@@ -57,6 +59,20 @@ public class Customer {
 
   public void setAccountId(int accountId) {
     this.accountId = accountId;
+  }
+
+  public boolean isAuthenticated() {
+    return this.authenticated;
+  }
+
+  // For a boolean, we usually use the "is" method, so we can comment the "get"
+  // method out
+  // public boolean getAuthenticated() {
+  // return this.authenticated;
+  }
+
+  public void setAuthenticated(boolean authenticated) {
+    this.authenticated = authenticated;
   }
 
 }
